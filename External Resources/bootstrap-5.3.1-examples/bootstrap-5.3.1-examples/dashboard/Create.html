@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create Account</title>
+    <script src="https://kit.fontawesome.com/5b3862e8d1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Create.css">
+</head>
+<body class="d-flex align-items-center py-4 bg-body-tertiary">
+<div class="container-fluid container-sm signup">
+  <main class="form-signin w-100 m-auto">
+    <img src="logowb.png" class="rounded mx-auto d-block" alt="" width="200" style="margin-bottom:25px ;">
+    <form id="signup-form" action="">
+      <fieldset>
+        <h3 style="color: hwb(211 89% 0%);">Registration Form</h3>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control tbform"
+            id="fname"
+            name="fname"
+            placeholder="name@example.com"
+          />
+          <label for="fname">First Name</label></div>
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="lname"
+              name="lname"
+              placeholder="name@example.com"
+            />
+            <label for="lname">Last Name</label></div>
+      <div class="form-floating align-items-center">
+        <select class="form-select-sm" >
+          <option selected style="text-align: center;">Gender</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+          <option value="O">Other</option>
+        </select>
+      </div>
+      <div >
+        <input type="date" name="" id="">
+      </div>
+      <div class="form-floating tb">
+        <input type="email" name="email" class="form-control ti" id="email" placeholder="name@example.com">
+        <label for="email">Email</label>
+      </div>
+     
+        <div class="password-toggle form-floating">
+            <input type="password" class="form-control " name="password" id="floatingPassword" placeholder="Password"required>
+            <label for="password">Password</label>
+            <span class="toggle-button tbtn" id="toggle"><i class="fa-regular fa-eye-slash " id="ico"></i>View </span><br>
+        </div>
+        <div class="password-toggle form-floating">
+            <input type="password" class="form-control " name="password" id="floatingPassword" placeholder="Password"required>
+            <label for="password">Confirm Password</label>
+            </div>
+
+        <div class="alert alert-danger" id="passwordError" style="display: none;">
+          Passwords do not match!
+        </div>
+        <button class="btn btn-outline-primary" type="submit">Sign Up</button>
+      </fieldset>
+    </form>  
+  </main>
+    <a href="main.html">Already have an Account ? Login. </a>
+ 
+</div>
+
+<script>
+
+        const passwordInput = document.getElementById("password");
+        const togglePasswordButton = document.getElementById("toggle");
+
+        togglePasswordButton.addEventListener("click", function () {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        });
+        const iconToggle = document.getElementById("toggle");
+        let isopen = true; // Initial state
+
+        iconToggle.addEventListener("click", function () {
+            const icon = iconToggle.querySelector("i");
+
+            // Toggle between the two icons
+            if (isopen) {
+                icon.className = "fa-regular fa-eye"; // Replace with the second icon class
+            } else {
+                icon.className = "fa-regular fa-eye-slash"; // Replace with the first icon class
+                
+            }
+
+            isopen = !isopen; // Toggle the state
+        });
+      document.getElementById("signup-form").addEventListener("submit", function(event) {
+          const password = document.getElementById("password").value;
+          const passwordCondition = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&!])[A-Za-z\d@#$%^&!]{8,}$/;
+
+          if (!passwordCondition.test(password)) {
+              event.preventDefault();
+              alert("Password does not meet the required conditions.");
+          }
+      });
+      
+      const passwordForm = document.getElementById("signup-form");
+        const confirmPasswordInput = document.getElementById("floatingPassword");
+        const passwordError = document.getElementById("passwordError");
+
+        passwordForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            if (passwordInput.value !== confirmPasswordInput.value) {
+                passwordError.style.display = "block";
+            } else {
+                passwordError.style.display = "none";
+                alert("Password confirmed successfully!");
+                // Here, you can submit the form or perform other actions.
+            }
+        });
+  </script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

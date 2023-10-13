@@ -1,8 +1,8 @@
 html,
 body {
   height: 100%;
-  background: rgb(125,226,252);
-  background: linear-gradient(135deg, #27005D, #E4F1FF); 
+}
+
 .form-signin {
   max-width: 330px;
   padding: 1rem;
@@ -23,26 +23,3 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-
-.toptxt{
-    text-align: center;
-    padding-top: 5%;
-    color: #E4F1FF;
-}
-.tb{
-  padding: 1%;
-}
-
-.subbtn{
-  margin:auto;
-  display: block;
-}
-.alink{
-  text-align: center;
-  font-size: 0.85rem;
-  padding-top: 1.5%;
-}
-.ftrtxt{
-  text-align: center;
-  font-size: 0.85rem;
-}}

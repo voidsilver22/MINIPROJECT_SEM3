@@ -1,0 +1,112 @@
+html,
+body {
+  text-align: center;
+  height: 100%;
+  background: rgb(125,226,252);
+background: linear-gradient(135deg, #27005D, #E4F1FF);
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: 10px;
+  border-bottom-right-radius: 05;
+  border-bottom-left-radius: 05;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 05;
+  border-top-right-radius: 05;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 05;
+  border-top-right-radius: 05;
+}
+
+
+.toptxt{
+    text-align: left;
+    padding-top: 5%;
+}
+.tb{
+  padding: 1%;
+}
+
+.subbtn{
+  margin:auto;
+  display: block;
+}
+.alink{
+  text-align: center;
+  font-size: 0.85rem;
+  padding-top: 1.5%;
+}
+.ftrtxt{
+  text-align: center;
+  font-size: 0.85rem;
+}
+}
+/* Custom input type date */
+input[type="date"] {
+  font-size: 16px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+ }
+ 
+ input[type="date"]:focus {
+  border-color: #007bff;
+  outline: none;
+ }
+ 
+ input[type="date"]::-webkit-calendar-picker-indicator {
+
+  background-color: #ffffff;
+  color: #fff;
+  border-radius: 4px;
+  padding: 4px;
+  margin-top: 2px;
+  margin-right: 2px;
+  cursor: pointer;
+ }
+ 
+ input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+ }
+ 
+ input[type="date"]::-webkit-clear-button {
+  display: none;
+ }
+ .section{
+  display: inline;
+ }
+/* Add this CSS to your stylesheet */
+.container {
+  max-width: 100%; /* Ensure the container doesn't exceed its parent's width */
+}
+
+img {
+  max-width: 100%; /* Make sure the image doesn't exceed the container's width */
+  height: auto; /* Maintain the image's aspect ratio */
+ /* Remove any default spacing or alignment */
+  margin: 0 auto; /* Center the image horizontally within the container */
+padding: 0;
+}
+.tbtn{
+  position: relative;
+  right: 0px;
+  left: 200px;
+  bottom: 52px;
+}
