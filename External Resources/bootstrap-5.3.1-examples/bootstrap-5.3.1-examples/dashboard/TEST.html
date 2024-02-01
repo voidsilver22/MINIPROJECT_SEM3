@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    td {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-4">
+  <h2>Editable Bootstrap Table</h2>
+  <table class="table table-bordered" id="editableTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>John Doe</td>
+        <td>john.doe@example.com</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jane Smith</td>
+        <td>jane.smith@example.com</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Bob Johnson</td>
+        <td>bob.johnson@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  $(document).ready(function(){
+    // Double click on a table cell to make it editable
+    $('td').dblclick(function(){
+      var originalContent = $(this).text();
+      $(this).addClass('editable').html('<input type="text" value="' + originalContent + '" />').children().focus();
+    });
+
+    // Click outside of a table cell to save the edited content
+    $(document).on('focusout', 'td.editable input', function(){
+      var newContent = $(this).val();
+      $(this).parent().removeClass('editable').text(newContent);
+    });
+  });
+</script>
+
+</body>
+</html>
