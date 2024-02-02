@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <!-- Include any necessary CSS styles here -->
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Expense Tracker</h2>
+    <table id="expenseTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be populated dynamically -->
+        </tbody>
+    </table>
+
+    <!-- Button to add new expense row -->
+    <button onclick="addExpenseRow()">Add Expense</button>
+
+    <!-- Include any necessary JavaScript code here -->
+    <script>
+        // Function to add a new row to the expense table
+        function addExpenseRow() {
+            const tableBody = document.querySelector("#expenseTable tbody");
+            const newRow = `
+                <tr>
+                    <td><input type="date" name="date"></td>
+                    <td><input type="text" name="category"></td>
+                    <td><input type="text" name="description"></td>
+                    <td><input type="number" name="amount"></td>
+                    <td><button onclick="removeExpenseRow(this)">Remove</button></td>
+                </tr>
+            `;
+            tableBody.insertAdjacentHTML("beforeend", newRow);
+        }
+
+        // Function to remove a row from the expense table
+        function removeExpenseRow(button) {
+            const row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>
+</body>
+</html>

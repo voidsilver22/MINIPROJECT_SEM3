@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <!-- Include any necessary CSS styles here -->
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Edit Goals</h1>
+        </header>
+        <!-- End Header -->
+
+        <!-- Main -->
+        <main class="main-container">
+            <div class="charts">
+                <div class="charts-card">
+                    <div id="chart"></div>
+                    <div class="expense-details">
+                        <h2>Expense by Category</h2>
+                        <div class="table-container">
+                            <table id="expenseTable">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Category</th>
+                                        <th>Description</th>
+                                        <th>Amount</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="expenseTableBody">
+                                    <!-- Data will be populated dynamically -->
+                                </tbody>
+                            </table>
+                            <!-- Form to add new expense -->
+                            <form id="expenseForm">
+                                <input type="date" name="date" required>
+                                <input type="text" name="category" placeholder="Category" required>
+                                <input type="text" name="description" placeholder="Description" required>
+                                <input type="number" name="amount" placeholder="Amount" required>
+                                <button type="submit">Add Expense</button>   
+                                 
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- End Main -->
+    </div>
+
+    <!-- Include any necessary JavaScript code here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>

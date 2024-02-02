@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <!-- Include any necessary CSS styles here -->
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Edit Goals</h1>
+        </header>
+        <!-- End Header -->
+
+        <!-- Main -->
+        <main class="main-container">
+            <div class="charts">
+                <div class="charts-card">
+                    <div id="chart"></div>
+                    <div class="expense-details">
+                        <h2>Expense by Category</h2>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Category</th>
+                                        <th>Description</th>
+                                        <th>Percentage</th>
+                                        <th>Money</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="expenseTableBody">
+                                    <!-- Data will be populated dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- End Main -->
+    </div>
+
+    <!-- Include any necessary JavaScript code here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <script src="app2.js"></script>
+</body>
+</html>
