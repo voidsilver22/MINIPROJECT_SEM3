@@ -7,68 +7,203 @@
     <script src="https://kit.fontawesome.com/5b3862e8d1.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="Create.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
-<div class="container-fluid container-sm signup">
-  <main class="form-signin w-100 m-auto">
-    <img src="logowb.png" class="rounded mx-auto d-block" alt="" width="200" style="margin-bottom:25px ;">
-    <form id="signup-form" action="">
-      <fieldset>
+  <div class="container-fluid container-sm signup">
+    <main class="form-signin w-100 m-auto"><img src="logowb.png" class="rounded mx-auto d-block" alt="" width="200" style="margin-bottom:25px ;">
+      <form id="signup-form" action="">
+        <fieldset>
         <h3 style="color: hwb(211 89% 0%);">Registration Form</h3>
-        <div class="form-floating">
-          <input
-            type="text"
-            class="form-control tbform"
-            id="fname"
-            name="fname"
-            placeholder="name@example.com"
-          />
-          <label for="fname">First Name</label></div>
-          <div class="form-floating">
-            <input
-              type="text"
-              class="form-control"
-              id="lname"
-              name="lname"
-              placeholder="name@example.com"
-            />
-            <label for="lname">Last Name</label></div>
-      <div class="form-floating align-items-center">
-        <select class="form-select-sm" >
-          <option selected style="text-align: center;">Gender</option>
-          <option value="M">Male</option>
-          <option value="F">Female</option>
-          <option value="O">Other</option>
-        </select>
-      </div>
-      <div >
-        <input type="date" name="" id="">
-      </div>
-      <div class="form-floating tb">
-        <input type="email" name="email" class="form-control ti" id="email" placeholder="name@example.com">
-        <label for="email">Email</label>
-      </div>
-     
-        <div class="password-toggle form-floating">
-            <input type="password" class="form-control " name="password" id="floatingPassword" placeholder="Password"required>
-            <label for="password">Password</label>
-            <span class="toggle-button tbtn" id="toggle"><i class="fa-regular fa-eye-slash " id="ico"></i>View </span><br>
-        </div>
-        <div class="password-toggle form-floating">
-            <input type="password" class="form-control " name="password" id="floatingPassword" placeholder="Password"required>
-            <label for="password">Confirm Password</label>
+      <form id="signup-form" action="">
+        <fieldset>
+          <div class="row mb-3">
+            <div class="col">
+              <div class="form-floating">
+                <input type="text" class="form-control tbform" id="fname" name="fname" placeholder="First Name" />
+                <label for="fname">First Name</label>
+              </div>
             </div>
+            <div class="col">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" />
+                <label for="lname">Last Name</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email"class="form-control" id="email" name="Email" placeholder="Email" />
+            <label for="Email">Email</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+            <label for="address">Address</label>
+          </div>
 
-        <div class="alert alert-danger" id="passwordError" style="display: none;">
-          Passwords do not match!
-        </div>
-        <button class="btn btn-outline-primary" type="submit">Sign Up</button>
-      </fieldset>
-    </form>  
-  </main>
-    <a href="main.html">Already have an Account ? Login. </a>
- 
-</div>
+          <div class="row mb-3">
+            <div class="col">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="city" name="city" placeholder="City" />
+                <label for="city">City</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="pincode" name="pincode" placeholder="Pincode" />
+                <label for="pincode">Pincode</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <div class="form-floating">
+                <select class="form-select" id="state" name="state">
+                  <option selected>Select State</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Chhattisgarh">Chhattisgarh</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Haryana">Haryana</option>
+                  <option value="Himachal Pradesh">Himachal Pradesh</option>
+                  <option value="Jharkhand">Jharkhand</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Manipur">Manipur</option>
+                  <option value="Meghalaya">Meghalaya</option>
+                  <option value="Mizoram">Mizoram</option>
+                  <option value="Nagaland">Nagaland</option>
+                  <option value="Odisha">Odisha</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Sikkim">Sikkim</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Tripura">Tripura</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="West Bengal">West Bengal</option>
+                </select>
+                <label for="state">State</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-floating">
+                <select class="form-select" id="country" name="country">
+                  <option selected>Select Country</option>
+                  
+                </select>
+                <label for="country">Country</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-floating mb-3">
+            <select class="form-select" id="gender" name="gender">
+              <option selected>Select Gender</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+            </select>
+            <label for="gender">Gender</label>
+          </div>
+
+          <div class="password-toggle form-floating mb-3">
+            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+            <label for="password">Password</label>
+            <span class="toggle-button tbtn" id="toggle"><i class="fa-regular fa-eye-slash" id="ico"></i>View</span>
+          </div>
+
+          <div class="password-toggle form-floating mb-3">
+            <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
+            <label for="confirmPassword">Confirm Password</label>
+          </div>
+
+          <div class="alert alert-danger" id="passwordError" style="display: none;">
+            Passwords do not match!
+          </div>
+
+          <button class="btn btn-outline-primary" type="submit">Sign Up</button>
+        </fieldset>
+      </form>
+    </main>
+    <a href="main.html">Already have an Account? Login.</a>
+
+    <script>
+      fetch('https://restcountries.com/v3.1/all')
+    .then(response => response.json())
+    .then(data => {
+      // Populate the dropdown with country names
+      const countryDropdown = document.getElementById('country');
+      data.forEach(country => {
+        const option = document.createElement('option');
+        option.value = country.name.common;
+        option.textContent = country.name.common;
+        countryDropdown.appendChild(option);
+      });
+    })
+    .catch(error => console.error('Error fetching country data:', error));
+
+      document.getElementById("state").addEventListener("change", function() {
+        var selectedState = document.getElementById("state").value;
+        console.log("Selected State: " + selectedState);
+      });
+    document.getElementById('country').addEventListener('change', function() {
+    var selectedCountry = document.getElementById('country').value;
+    console.log('Selected Country: ' + selectedCountry);
+    // Add your logic or actions here based on the selected country.
+  });
+  document.getElementById("gender").addEventListener("change", function() {
+        var gender = document.getElementById("gender").value;
+        console.log("Selected Gender: " + gender);
+      });
+    document.getElementById("signup-form").addEventListener("submit", function(event){
+    event.preventDefault(); // Prevents the default form submission behavior
+    
+    // Retrieve input values
+    var fname = document.getElementById("fname").value;
+    var email = document.getElementById("email").value;
+    var lname = document.getElementById("lname").value;
+    var addr = document.getElementById("address").value;
+    var city =  document.getElementById("city").value;
+    var pincode = document.getElementById("pincode").value;
+    var pswd = document.getElementById("password").value;
+
+
+    // Display input values in console
+    console.log("Name:", fname+' '+lname);
+    console.log("Email:", email);
+    console.log("Address:", addr);
+    console.log("City:", city);
+    console.log("Pincode:", pincode);
+    console.log("Password:", pswd);
+});
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script>
 

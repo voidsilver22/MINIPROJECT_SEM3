@@ -1,0 +1,23 @@
+.form-control {
+    border-radius: 40px; /* Adding border radius */
+}
+.form-select-sm{
+    border-radius: 40px;
+    margin-top: 15px;
+}
+.form-control{
+    margin: 5% 0;
+}
+.form-select {
+    border-radius: 40px;
+  }
+  .signup {
+    width: 80%; /* Set width to 80% */
+    margin: auto;/*Center the container */
+  }
+
+  .form-floating input[type="text"],
+  .form-floating input[type="password"],
+  .form-floating select {
+    width: 100%;
+  }
