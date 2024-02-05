@@ -9,9 +9,11 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
 
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    
+<link rel="stylesheet" href="style4.css">
 
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -149,6 +151,9 @@
 
     
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="info-fill" viewBox="0 0 16 16">
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+  </symbol>
   <symbol id="calendar3" viewBox="0 0 16 16">
     <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
     <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
@@ -291,114 +296,65 @@
               </a>
             </li>
           </ul>
+
+          <hr class="my-3">
+
+          <ul class="nav flex-column mb-auto">
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
+                Profile Settings
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="main.html">
+                <svg class="bi"><use xlink:href="#door-closed"/></svg>
+                Sign out
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Weekly Stats </h1>
-        <div class="btn-toolbar mb-2 mb-md-0">
-          <div class="btn-group me-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-          </div>
-          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-1">
-            <svg class="bi"><use xlink:href="#calendar3"/></svg>
-            This week
-          </button>
-        </div>
-      </div>
-
-      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-
-      <h2>Transactions</h2>
-      <div class="table-responsive small">
-        <table class="table table-striped table-sm">
+        <h1 class="h2">Add & Edit Data </h1>
+    </div>
+    
+    
+    <div class="container-fluid">
+      <table id="table table-bordered">
           <thead>
-            <tr>
-              <th scope="col">Sr.No:</th>
-              <th scope="col">Date</th>
-              <th scope="col">Time</th>
-              <th scope="col">Amount</th>
-              <th scope="col">Balance</th>
-              <th scope="col">Credit/Debit</th>
-            </tr>
+              <tr>
+                  <th>Date</th>
+                  <th>Category</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                  <th>Action</th>
+              </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>15-Oct-2023</td>
-              <td>15:25:59</td>
-              <td>15,000</td>
-              <td>1,50,000</td>
-              <td>Credit</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>15-Oct-2023</td>
-              <td>21:25:32</td>
-              <td>15,000</td>
-              <td>1,65,000</td>
-              <td>Credit</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>17-Oct-2023</td>
-              <td>11:24:42</td>
-              <td>15,000</td>
-              <td>1,50,000</td>
-              <td>Debit</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>15-Oct-2023</td>
-              <td>15:25:59</td>
-              <td>15,000</td>
-              <td>1,50,000</td>
-              <td>Debit</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>15-Oct-2023</td>
-              <td>15:25:59</td>
-              <td>15,000</td>
-              <td>1,50,000</td>
-              <td>Debit</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>15-Oct-2023</td>
-              <td>15:25:59</td>
-              <td>15,000</td>
-              <td>1,50,000</td>
-              <td>Credit</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>15-Oct-2023</td>
-              <td>15:25:59</td>
-              <td>15,000</td>
-              <td>1,50,000</td>
-              <td>Debit</td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>15-Oct-2023</td>
-              <td>15:25:59</td>
-              <td>15,000</td>
-              <td>1,50,000</td>
-              <td>Credit</td>
-            </tr>
-
-            </tr>
+          <tbody id="expenseTableBody">
+              <!-- Data will be populated dynamically -->
           </tbody>
-        </table>
-      </div>
-    </main>
+      </table>
+      <!-- Form to add new expense -->
+      <form id="expenseForm">
+          <input type="date" name="date" required>
+          <input type="text" name="category" placeholder="Category" required>
+          <input type="text" name="description" placeholder="Description" required>
+          <input type="number" name="amount" placeholder="Amount" required>
+          <button clas="btn btn-primary"  type="submit">Add Expense</button>   
+           
+      </form>
+  </main>
+    
+    
   </div>
 </div>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <script src="script2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js" integrity="sha384-gdQErvCNWvHQZj6XZM0dNsAoY4v+j5P1XDpNkcM3HJG1Yx04ecqIHk7+4VBOCHOG" crossorigin="anonymous"></script><script src="dashboard.js"></script></body>
 </html>
+

@@ -1,9 +1,8 @@
 html,
 body {
   text-align: center;
-  height: 100%;
-  background: rgb(125,226,252);
-background: linear-gradient(135deg, #27005D, #E4F1FF);
+  height: fit-content;
+  background: linear-gradient(135deg, #27005D, #E4F1FF);
 
 .form-signin {
   max-width: 330px;
